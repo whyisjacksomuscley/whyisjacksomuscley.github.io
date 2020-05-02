@@ -11,11 +11,13 @@ function App() {
 
   console.log(`stage: ${stage}`);
   const truth = truths[stage % 3];
+  const opacity = 0.01 * stage;
   return (
     <div className="App" onClick={onClick}>
-      <main className="get-out-of-here">
+      <p className="the-answer">
         {truth}
-      </main>
+      </p>
+      <img src="/wojak.png" alt="big boy" style={{ opacity: opacity }} />
     </div>
   );
 }

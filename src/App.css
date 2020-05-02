@@ -13,7 +13,17 @@ body,
   display: flex;
 }
 
-.get-out-of-here {
+.App {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.App .the-answer {
+  z-index:2;
   margin: auto;
   text-align: center;
   font-size: 10vw;
@@ -21,4 +31,16 @@ body,
   font-family: arial, helvetica, sans-serif;
   font-weight: bold;
   color: #555;
+
+  position: relative;
+  z-index: 2;
+}
+
+.App img { 
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.00;
 }
